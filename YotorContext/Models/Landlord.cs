@@ -26,11 +26,8 @@ namespace YotorContext.Models
         public int OrganizationId { get; set; }
         public string Name { get; set; }
 
-        [JsonIgnore]
         public virtual Organization Organization { get; set; }
-        [JsonIgnore]
         public virtual Customer User { get; set; }
-        [JsonIgnore]
         public virtual ICollection<Restriction> Restrictions { get; set; }
     }
 }
