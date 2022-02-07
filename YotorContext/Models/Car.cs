@@ -12,6 +12,24 @@ namespace YotorContext.Models
             Bookings = new HashSet<Booking>();
         }
 
+        public Car(int organization_id, string model, string brand, string year, string transmission, string address, bool status, string type, int price, string photo, string description, string number)
+        {
+            OrganizationId = organization_id;
+            Model = model;
+            Brand = brand;
+            Year = year;
+            Transmission = transmission;
+            Address = address;
+            Status = status;
+            Type = type;
+            Price = price;
+            Photo = photo;
+            Description = description;
+            Number = number;
+
+            Bookings = new HashSet<Booking>();
+        }
+
         public int CarId { get; set; }
         public int OrganizationId { get; set; }
         public string Model { get; set; }

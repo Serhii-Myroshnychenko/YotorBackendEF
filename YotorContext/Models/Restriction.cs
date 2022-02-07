@@ -11,6 +11,14 @@ namespace YotorContext.Models
         {
             Bookings = new HashSet<Booking>();
         }
+        public Restriction(int landlord_id, string car_name, string description)
+        {
+            LandlordId = landlord_id;
+            CarName = car_name;
+            Description = description;
+
+            Bookings = new HashSet<Booking>();
+        }
 
         public int RestrictionId { get; set; }
         public int LandlordId { get; set; }

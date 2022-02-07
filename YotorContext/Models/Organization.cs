@@ -12,7 +12,20 @@ namespace YotorContext.Models
             Cars = new HashSet<Car>();
             Landlords = new HashSet<Landlord>();
         }
+        public Organization(Organization organization)
+        {
+            Name = organization.Name;
+            Email = organization.Email;
+            Phone = organization.Phone;
+            Code = organization.Code;
+            Taxes = organization.Taxes;
+            Address = organization.Address;
+            Founder = organization.Founder;
+            Account = organization.Account;
 
+            Cars = new HashSet<Car>();
+            Landlords = new HashSet<Landlord>();
+        }
         public int OrganizationId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }

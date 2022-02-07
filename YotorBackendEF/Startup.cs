@@ -11,9 +11,11 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using YotorBackendEF.Contracts;
 using YotorBackendEF.Repositories;
+using YotorContext.Helpers;
 using YotorContext.Models;
 
 namespace YotorBackendEF
@@ -32,8 +34,12 @@ namespace YotorBackendEF
         {
 
             services.AddControllers();
+
+            var authOptionsConfiguration = Configuration.GetSection("Auth");
+            services.Configure<AuthOptions>(authOptionsConfiguration);
+
             services.AddDbContext<YotorDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
-            services.AddScoped<ICarRepository, CarRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "YotorBackendEF", Version = "v1" });
@@ -53,7 +59,7 @@ namespace YotorBackendEF
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

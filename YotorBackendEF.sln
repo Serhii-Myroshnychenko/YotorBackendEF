@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YotorBackendEF", "YotorBackendEF\YotorBackendEF.csproj", "{4E5F9A0B-2DBA-458B-86C1-B34C6EF1F361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YotorBackendEF", "YotorBackendEF\YotorBackendEF.csproj", "{4E5F9A0B-2DBA-458B-86C1-B34C6EF1F361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YotorContext", "YotorContext\YotorContext.csproj", "{94160B49-8C82-4752-A4A0-836393B271AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YotorContext", "YotorContext\YotorContext.csproj", "{94160B49-8C82-4752-A4A0-836393B271AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YotorResources", "YotorResources\YotorResources.csproj", "{9615B96F-198B-4B2C-8E6D-9B991127BE72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{521D815E-56C8-4FAF-AB3F-383C61440A61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{94160B49-8C82-4752-A4A0-836393B271AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94160B49-8C82-4752-A4A0-836393B271AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94160B49-8C82-4752-A4A0-836393B271AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9615B96F-198B-4B2C-8E6D-9B991127BE72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9615B96F-198B-4B2C-8E6D-9B991127BE72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9615B96F-198B-4B2C-8E6D-9B991127BE72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9615B96F-198B-4B2C-8E6D-9B991127BE72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521D815E-56C8-4FAF-AB3F-383C61440A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521D815E-56C8-4FAF-AB3F-383C61440A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521D815E-56C8-4FAF-AB3F-383C61440A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521D815E-56C8-4FAF-AB3F-383C61440A61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

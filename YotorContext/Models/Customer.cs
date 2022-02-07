@@ -13,6 +13,18 @@ namespace YotorContext.Models
             Feedbacks = new HashSet<Feedback>();
             Landlords = new HashSet<Landlord>();
         }
+        public Customer(string full_name, string email, string phone, string password, bool is_admin)
+        {
+            FullName = full_name;
+            Email = email;
+            Phone = phone;
+            Password = password;
+            IsAdmin = is_admin;
+
+            Bookings = new HashSet<Booking>();
+            Feedbacks = new HashSet<Feedback>();
+            Landlords = new HashSet<Landlord>();
+        }
 
         public int UserId { get; set; }
         public string FullName { get; set; }

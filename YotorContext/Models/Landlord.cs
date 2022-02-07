@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 #nullable disable
 
@@ -11,14 +12,25 @@ namespace YotorContext.Models
         {
             Restrictions = new HashSet<Restriction>();
         }
+        public Landlord(int user_id, int organization_id, string name)
+        {
+            UserId = user_id;
+            OrganizationId = organization_id;
+            Name = name;
+
+            Restrictions = new HashSet<Restriction>();
+        }
 
         public int LandlordId { get; set; }
         public int UserId { get; set; }
         public int OrganizationId { get; set; }
         public string Name { get; set; }
 
+        [JsonIgnore]
         public virtual Organization Organization { get; set; }
+        [JsonIgnore]
         public virtual Customer User { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Restriction> Restrictions { get; set; }
     }
 }

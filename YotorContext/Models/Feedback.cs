@@ -11,6 +11,15 @@ namespace YotorContext.Models
         {
             Bookings = new HashSet<Booking>();
         }
+        public Feedback(int user_id, string name, DateTime? date, string text)
+        {
+            UserId = user_id;
+            Name = name;
+            Date = date;
+            Text = text;
+
+            Bookings = new HashSet<Booking>();
+        }
 
         public int FeedbackId { get; set; }
         public int UserId { get; set; }
