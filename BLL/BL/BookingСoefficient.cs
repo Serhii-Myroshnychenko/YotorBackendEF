@@ -50,6 +50,5 @@ namespace BLL.BL
             }
             return coefficient;
         }
-        
     }
 }

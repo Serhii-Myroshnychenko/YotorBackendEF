@@ -12,6 +12,8 @@ namespace YotorResources.Contracts
         Task<Car> GetCarAsync(int id);
         Task CreateCarAsync(int organization_id, string model, string brand, string year, string transmission, string address, bool status, string type, int price, string phote, string description, string number);
         Task UpdateCarAsync(int id, string model, string brand, string year, string transmission, string address, bool status, string type, int price, string phote, string description, string number);
-       
+        Task<IEnumerable<Car>> GetMostPopularCarsAsync();
+
+
     }
 }

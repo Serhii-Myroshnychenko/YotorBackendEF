@@ -51,6 +51,18 @@ namespace YotorResources.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("Popular")]
+        public async Task<IActionResult> GetMostPopularCarsAsync()
+        {
+            try
+            {
+                return Ok(await _carRepository.GetMostPopularCarsAsync());
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
         [HttpPost("Create")]
         [Authorize]
         public async Task<IActionResult> CreateCarAsync([FromForm] CarConstructor carConstructor)
